@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Teams</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        .team {
+            margin: 15px 0;
+            padding: 15px;
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .team:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .team h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .player-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+            display: none; /* Initially hide players list */
+        }
+
+        .player-card {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 6px;
+            margin: 8px 0;
+            font-size: 1rem;
+            color: #333;
+            transition: background 0.3s;
+        }
+
+        .player-card:hover {
+            background: #d4d8dd;
+        }
+
+        .player-card img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .player-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .player-details span {
+            margin: 2px 0;
+        }
+
+        .player-details .role {
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>IPL Teams</h1>
+
+        <!-- Chennai Super Kings -->
+        <div class="team" onclick="togglePlayers('team1-players')">
+            <h2>Chennai Super Kings</h2>
+            <ul id="team1-players" class="player-list">
+                <li class="player-card">
+                    <img src="https://via.placeholder.com/50" alt="MS Dhoni">
+                    <div class="player-details">
+                        <span>Name: MS Dhoni</span>
+                        <span>Role: <span class="role">Batsman</span></span>
+                        <span>Country: India</span>
+                        <span>Price: ₹12 Cr</span>
+                    </div>
+                </li>
+                <li class="player-card">
+                    <img src="https://via.placeholder.com/50" alt="Ravindra Jadeja">
+                    <div class="player-details">
+                        <span>Name: Ravindra Jadeja</span>
+                        <span>Role: <span class="role">All-rounder</span></span>
+                        <span>Country: India</span>
+                        <span>Price: ₹16 Cr</span>
+                    </div>
+                </li>
+                <li class="player-card">
+                    <img src="https://via.placeholder.com/50" alt="Faf du Plessis">
+                    <div class="player-details">
+                        <span>Name: Faf du Plessis</span>
+                        <span>Role: <span class="role">Batsman</span></span>
+                        <span>Country: South Africa</span>
+                        <span>Price: ₹7 Cr</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Mumbai Indians -->
+        <div class="team" onclick="togglePlayers('team2-players')">
+            <h2>Mumbai Indians</h2>
+            <ul id="team2-players" class="player-list">
+                <li class="player-card">
+                    <img src="https://via.placeholder.com/50" alt="Rohit Sharma">
+                    <div class="player-details">
+                        <span>Name: Rohit Sharma</span>
+                        <span>Role: <span class="role">Batsman</span></span>
+                        <span>Country: India</span>
+                        <span>Price: ₹15 Cr</span>
+                    </div>
+                </li>
+                <li class="player-card">
+                    <img src="https://via.placeholder.com/50" alt="Jasprit Bumrah">
+                    <div class="player-details">
+                        <span>Name: Jasprit Bumrah</span>
+                        <span>Role: <span class="role">Bowler</span></span>
+                        <span>Country: India</span>
+                        <span>Price: ₹12 Cr</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+       
+        <!-- Royal Challengers Bangalore -->
+        <div class="team" onclick="togglePlayers('team3-players')">
+            <h2>Royal Challengers Bangalore</h2>
+            <ul id="team3-players" class="player-list">
+                <li class="player-card">
+                    <img src="https://via.placeholder.com/50" alt="Virat Kohli">
+                    <div class="player-details">
+                        <span>Name: Virat Kohli</span>
+                        <span>Role: <span class="role">Batsman</span></span>
+                        <span>Country: India</span>
+                        <span>Price: ₹17 Cr</span>
+                    </div>
+                </li>
+                <li class="player-card">
+                    <img src="https://via.placeholder.com/50" alt="AB de Villiers">
+                    <div class="player-details">
+                        <span>Name: AB de Villiers</span>
+                        <span>Role: <span class="role">Batsman</span></span>
+                        <span>Country: South Africa</span>
+                        <span>Price: ₹11 Cr</span>
+                    </div>
+                </li>
+                <li class="player-card">
+                    <img src="https://via.placeholder.com/50" alt="Yuzvendra Chahal">
+                    <div class="player-details">
+                        <span>Name: Yuzvendra Chahal</span>
+                        <span>Role: <span class="role">Bowler</span></span>
+                        <span>Country: India</span>
+                        <span>Price: ₹6 Cr</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        function togglePlayers(playerListId) {
+            const playerList = document.getElementById(playerListId);
+            if (playerList.style.display === "none" || playerList.style.display === "") {
+                playerList.style.display = "block"; // Show the players
+            } else {
+                playerList.style.display = "none"; // Hide the players
+            }
+        }
+    </script>
+</body>
+</html>
